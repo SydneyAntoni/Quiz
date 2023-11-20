@@ -1,0 +1,24 @@
+Aufgabe: Erstelle ein interaktives Quiz, das HTML, CSS und JavaScript verwendet.
+
+Anforderungen:
+
+Erstelle eine HTML-Datei für das Quiz.
+Füge eine Überschrift hinzu, die den Titel des Quiz darstellt.
+Erstelle Abschnitte für jede Frage des Quiz mit entsprechenden Nummerierungen.
+
+Stilisiere das Quiz mit CSS.
+Verwende CSS, um das Aussehen des Quiz ansprechend zu gestalten.
+Stelle sicher, dass die Fragen und Optionen klar lesbar sind.
+
+Implementiere JavaScript, um die Logik des Quiz zu steuern.
+Jede Frage sollte mehrere Optionen haben (mindestens 4).
+Füge eine Funktion hinzu, die überprüft, ob die ausgewählte Option korrekt ist.
+Zeige am Ende des Quiz die Gesamtpunktzahl an.
+
+Erstelle ein neues Repository auf GitHub für dieses Quiz.
+Pushe deinen Code in einen neuen Branch mit dem Namen "interaktives-quiz".
+Füge eine README-Datei hinzu, die Anweisungen zur Verwendung des Quizzes enthält.
+
+Extra:
+Implementiere eine Timer-Funktion, um die Zeit für das gesamte Quiz zu begrenzen.
+Füge ein schönes Design und Animationen hinzu, um das Quiz interaktiver zu gestalten.
