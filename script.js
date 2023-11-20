@@ -7,6 +7,7 @@ let question3 = document.getElementsByClassName("3");
 let question4 = document.getElementsByClassName("4");
 let question = document.getElementsByClassName("question");
 let results = document.getElementById("results");
+
 for(let i = 0; i < question1.length; i++) {
     question1[i].addEventListener("click", () => question1ClickHandler(i));
     question2[i].addEventListener("click", () => question2ClickHandler(i));
@@ -77,14 +78,11 @@ function timer(){
         let now = new Date().getTime();
         let timeleft = countDownDate - now;
 
-        // Calculating the days, hours, minutes and seconds left
         let minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
         let seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
-        // Result is output to the specific element
         document.getElementById("time").innerHTML = minutes + "m " + seconds + "s ";
 
-        // Display the message when countdown is over
         if (timeleft < 0) {
             clearInterval(myfunc);
             document.getElementById("time").innerHTML = ""
