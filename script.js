@@ -72,7 +72,7 @@ function question4ClickHandler(i) {
     }
 }
 function timer(){
-    let countDownDate = new Date().getTime()+60*1000*3;
+    let countDownDate = new Date().getTime() + 60 * 1000 * 3;
     let myfunc = setInterval(function() {
 
         let now = new Date().getTime();
@@ -82,6 +82,10 @@ function timer(){
         let seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
         document.getElementById("time").innerHTML = minutes + "m " + seconds + "s ";
+
+        if(timeleft < 10000) {
+            document.getElementById("time").style.color = "red";
+        }
 
         if (timeleft < 0) {
             clearInterval(myfunc);
