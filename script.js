@@ -8,6 +8,8 @@ let question4 = document.getElementsByClassName("4");
 let question = document.getElementsByClassName("question");
 let results = document.getElementById("results");
 
+let myfunc;
+
 for(let i = 0; i < question1.length; i++) {
     question1[i].addEventListener("click", () => question1ClickHandler(i));
     question2[i].addEventListener("click", () => question2ClickHandler(i));
@@ -28,52 +30,45 @@ function startClickHandler() {
 }
 
 function question1ClickHandler(i) {
+    question[1].style.display = "none";
+    question[2].style.display = "block";
     if(question1[i].innerHTML == "2021"){
         punkte++;
-        question[1].style.display = "none";
-        question[2].style.display = "block";
-    } else {
-        question[1].style.display = "none";
-        question[2].style.display = "block";
+        console.log(punkte);
     }
 }
 
 function question2ClickHandler(i) {
+    question[2].style.display = "none";
+    question[3].style.display = "block";
     if(question2[i].innerHTML == "20"){
         punkte++;
-        question[2].style.display = "none";
-        question[3].style.display = "block";
-    } else {
-        question[2].style.display = "none";
-        question[3].style.display = "block";
+        console.log(punkte);
     }
 }
 
 function question3ClickHandler(i) {
-        console.log(question3[i].innerHTML);
+    question[3].style.display = "none";
+    question[4].style.display = "block";
     if(question3[i].innerHTML == "Makler im Fokus &amp; Remote Coffee"){
         punkte++;
-        question[3].style.display = "none";
-        question[4].style.display = "block";
-    } else {
-        question[3].style.display = "none";
-        question[4].style.display = "block";
+        console.log(punkte);
     }
 }
 
 function question4ClickHandler(i) {
+    question[4].style.display = "none";
+    clearInterval(myfunc);
+    document.getElementById("time").style.display = "none";
     if(question4[i].innerHTML == "3"){
         punkte++;
-        question[4].style.display = "none";
-        results.innerHTML =  "Sie haben " + punkte + " von 4 Punkten erreicht.";
-    } else {
-        question[4].style.display = "none";
-        results.innerHTML = "Sie haben " + punkte + " von 4 Punkten erreicht.";
+        console.log(punkte);
     }
+    results.innerHTML = "Sie haben " + punkte + " von 4 Punkten erreicht.";
 }
 function timer(){
     let countDownDate = new Date().getTime() + 60 * 1000 * 3;
-    let myfunc = setInterval(function() {
+    myfunc = setInterval(function() {
 
         let now = new Date().getTime();
         let timeleft = countDownDate - now;
