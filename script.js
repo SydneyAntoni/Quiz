@@ -28,7 +28,7 @@ function startClickHandler() {
 }
 
 function question1ClickHandler(i) {
-    if(question1[i].innerHTML == "2020"){
+    if(question1[i].innerHTML == "2021"){
         punkte++;
         question[1].style.display = "none";
         question[2].style.display = "block";
